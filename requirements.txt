@@ -20,8 +20,6 @@ pypdf
 sentence-transformers
 openai
 sentencepiece 
-
-
-
+google-generativeai
 
 
