@@ -1,4 +1,3 @@
-from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyPDFLoader
@@ -10,7 +9,7 @@ print("Loaded documents", len(docs))
 
 # Split docs into chunks 
 splitter = RecursiveCharacterTextSplitter(
-    chunk_size=100, 
+    chunk_size=200, 
     chunk_overlap=20)
 
 chunks = splitter.split_documents(docs)

@@ -7,9 +7,9 @@ loader = PyPDFLoader(r"courses_offered.pdf")
 docs = loader.load()
 print("Loaded documents", len(docs))
  
-
-db = FAISS.from_documents(docs,
-                          OllamaEmbeddings(model="nomic-embed-text:latest"))
+embeddings_model  =  OllamaEmbeddings(model="nomic-embed-text:latest")
+db = FAISS.from_documents(docs,embeddings_model)
+               
 
 retrieved_results = db.similarity_search("Python", k = 3)
 print(f"Matching documents count : {len(retrieved_results)}")

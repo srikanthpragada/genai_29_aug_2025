@@ -24,5 +24,6 @@ results = vectorstore.similarity_search(query, k=2)  # Get the top 2 results
 # 5. Print the results
 for docs in results:
     print(docs.page_content)
+    print("-"  * 80)
  
 
