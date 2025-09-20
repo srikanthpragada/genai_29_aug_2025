@@ -17,6 +17,18 @@ def gcd(a, b):
 
 
 def isperfect(number):
+    """
+    Checks whether the given number is a perfect number.
+
+    A perfect number is a positive integer that is equal to the sum of its proper divisors,
+    excluding itself. For example, 6 is a perfect number because 1 + 2 + 3 = 6.
+
+    Parameters:
+        number (int): The number to check.
+
+    Returns:
+        bool: True if the number is perfect, False otherwise.
+    """
     """Check if a number is a perfect number."""
     if number < 1:
         return False

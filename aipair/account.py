@@ -8,6 +8,18 @@ class Account:
         self.current_balance = balance
 
     def deposit(self, amount):
+        """
+        Deposits a specified amount into the account.
+
+        Args:
+            amount (float): The amount to deposit. Must be positive.
+
+        Raises:
+            ValueError: If the deposit amount is not positive.
+
+        Side Effects:
+            Updates the current_balance attribute and prints the deposit confirmation.
+        """
         if amount > 0:
             self.current_balance += amount
             print(f"Deposited: {amount}. New balance: {self.current_balance}")
